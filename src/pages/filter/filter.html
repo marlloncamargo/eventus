@@ -1,0 +1,71 @@
+<!--
+  Generated template for the Filter page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Perfil de Pesquisa</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="saveFilter()">
+        Salvar
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list radio-group [(ngModel)]="optionSelect">
+    <ion-list-header>
+      Tipo de local
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Bar e Balada</ion-label>
+      <ion-radio value="0"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bar</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Balada</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Eventos
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Distancia Maxima: {{distanceRange}} km</ion-label>
+      <ion-range min="1" max="10" [(ngModel)]="distanceRange" pin="true">
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Evento(s) no(s) proximo(s) {{nextDays}} dia(s)</ion-label>
+      <ion-range min="1" max="90" [(ngModel)]="nextDays" pin="true">
+      </ion-range>
+    </ion-item>
+
+    <!--
+    <ion-item>
+      <ion-label>Mostrar locais sem evento</ion-label>
+      <ion-toggle [(ngModel)]="noEvents"></ion-toggle>
+    </ion-item>
+    -->
+  </ion-list>
+</ion-content>

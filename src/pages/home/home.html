@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Bares e Baladas</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+  <ion-content>
+    <ion-searchbar placeholder="Buscar" [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()">
+    </ion-searchbar>
+
+    <ion-grid *ngIf="alertMessage">
+      <ion-row>
+        <ion-col>
+          <img src="assets/icon/warning_48.png">
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          {{alertMessage}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+
+    <ion-list *ngIf="places">
+      <button ion-item  *ngFor="let place of places" (click)="searchEvents($event, place)">
+        <ion-thumbnail item-left>
+          <img src="{{place.picture.data.url}}">
+        </ion-thumbnail>
+        <h2 text-wrap>{{place.name}}</h2>
+        <p  text-wrap>{{place.location.street}}</p>
+        <p>{{place.location.city}}</p>
+      </button>
+    </ion-list>
+</ion-content>

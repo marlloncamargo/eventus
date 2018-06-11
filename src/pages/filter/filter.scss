@@ -1,0 +1,31 @@
+.ios, .md {
+  page-filter {
+
+    .scroll-content {
+      background: rgba(226,226,226,1);
+      background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(50%, rgba(219,219,219,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+      background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+      background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+      background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    }
+
+    .list-header {
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+
+    .list {
+        margin: none;
+    }
+
+    .input-wrapper {
+        display: inline-block;
+    }
+
+    .range {
+      padding: 0px;
+      padding-right: 20px;
+    }
+  }
+}
