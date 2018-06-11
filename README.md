@@ -1,4 +1,4 @@
-Eventus - Ionic
+# Eventus - Ionic
 
 Mobile application to show events from nightclubs and bars 
 
